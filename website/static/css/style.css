@@ -1,0 +1,206 @@
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    background-color: ghostwhite;
+}
+
+#mainHome {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    background-size: cover;
+}
+
+#mainHome .container-mainHome {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    overflow: hidden;
+}
+
+#mainHome img{
+    animation-name: animateLogo;
+    animation-duration: 2s;
+}
+  
+@keyframes animateLogo {
+    0% {
+        transform: translateY(-100vw);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#mainHome h1 {
+    margin: 0 0 10px 0;
+    font-size: 150px;
+    font-family: 'Rubik Dirt', cursive;
+    animation-name: start-animationH1;
+    animation-duration: 2s;
+    background: -webkit-linear-gradient(to left, #C2902D 0%, #FCF7CD 25%, #C2902D 50%, #FCF7CD 75%, #C2902D 100%);
+    background: -moz-linear-gradient(to left, #C2902D 0%, #FCF7CD 25%, #C2902D 50%, #FCF7CD 75%, #C2902D 100%);
+    background: linear-gradient(to left, #C2902D 0%, #FCF7CD 25%, #C2902D 50%, #FCF7CD 75%, #C2902D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes start-animationH1 {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#mainHome h2 {
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    animation-name: start-animationH2;
+    animation-duration: 2s;
+    background: -webkit-linear-gradient(to left, #C2902D 0%, #FCF7CD 25%, #C2902D 50%, #FCF7CD 75%, #C2902D 100%);
+    background: -moz-linear-gradient(to left, #C2902D 0%, #FCF7CD 25%, #C2902D 50%, #FCF7CD 75%, #C2902D 100%);
+    background: linear-gradient(to left, #C2902D 0%, #FCF7CD 25%, #C2902D 50%, #FCF7CD 75%, #C2902D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes start-animationH2 {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.arrowDownAnimation{
+    animation-name: arrowDownAnimation;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+}
+
+@keyframes arrowDownAnimation {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Mobile Main Home */
+@media (min-width: 1024px) {
+    #mainHome {
+        background-attachment: fixed;
+    }
+}
+  
+@media (max-width: 768px) {
+    #mainHome h1 {
+        font-size: 70px;
+    }
+  
+    #mainHome h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+  
+    #mainHome img {
+        width: 116px;
+        height: 150px;
+    }
+}
+
+#navbartop {
+    height: 40px;
+    z-index: 997;
+    transition: all 0.5s;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+
+
+#navbartop p {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Rubik Dirt', cursive;
+    color: #C2902D;
+    background: -webkit-linear-gradient(to left, #C2902D 0%, #FCF7CD 25%, #C2902D 50%, #FCF7CD 75%, #C2902D 100%);
+    background: -moz-linear-gradient(to left, #C2902D 0%, #FCF7CD 25%, #C2902D 50%, #FCF7CD 75%, #C2902D 100%);
+    background: linear-gradient(to left, #C2902D 0%, #FCF7CD 25%, #C2902D 50%, #FCF7CD 75%, #C2902D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+#divMessage{
+    padding-top: 40px;
+}
+
+.card img{
+    border-radius: 5px;
+}
+
+.contentDescription .titleDescription .description{
+    height: 0px;
+    opacity: 0;
+    clear: both;
+    overflow: hidden;
+    transition: height 2s;
+}
+
+.contentDescription .titleDescription:hover >.description{
+    opacity: 1;
+    height: 180px;
+}
+
+
+
+/* .slide {
+    position: absolute;
+    top: 85%;
+    left: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 20px 0;
+    color: #2f4d5a;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    max-height: 95px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+} */
+
+
+/* 
+.slide:hover .slideDesciption {
+    max-height: 300px;
+} */
+
+
+@media (max-width: 800px) {
+    .column {
+      flex: 46%;
+      max-width: 46%;
+    }
+} 

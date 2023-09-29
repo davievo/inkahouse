@@ -1,0 +1,23 @@
+<!--Form-->
+<section class="container">
+    <form action="registerLead/" method="POST" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="row g-3 pb-5">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Nombres" aria-label="Names" name="Names" id="validationCustom01" required>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" name="Email" id="validationCustom02" required>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="DNI" aria-label="DNI" maxlength="8" name="DNI" id="validationCustom03" required>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Telefono" aria-label="Phone" maxlength="9" name="Phone" id="validationCustom04" required>
+            </div>
+            <div class="col-md">
+                <input type="submit" class="btn btn-primary" placeholder="Submit" aria-label="Submit">
+            </div>
+         </div>
+    </form>
+</section>
